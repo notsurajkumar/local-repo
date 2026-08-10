@@ -1,3 +1,4 @@
+This is first edit of feature1 branch 
 ### configuring git
 ```bash
 git config --global user.name "My Name"
