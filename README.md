@@ -1,4 +1,3 @@
-This is first edit of feature1 branch 
 ### configuring git
 ```bash
 git config --global user.name "My Name"
@@ -74,3 +73,56 @@ git push -u origin main
 
 - `-u` : means upstream, which sets origin main as default
 - next time if we use just `git push` it will auto understand the `origin main`
+---
+# Workflow
+1. make repo in github
+2. clone locally
+3. make changes > add > commit
+4. push
+
+### git branches
+
+```bash
+# to check which branch we are on
+git branch
+
+# to rename branch
+git branch -M main
+
+# to create new branch
+git checkout -b <new branch name>
+
+# to change to other branch
+git checkout <final destination branch>
+
+# to delete branch
+# first do not be on the branch to be deleted
+git branch -d <branch name>
+
+# to push changes to a branch 
+git push origin <branch name>
+```
+
+### merging code
+
+#### using cli
+```bash
+# to compare commits, branches, files and more
+# branch name is not the one which we are on, but the one which needs to be compared with
+git diff <branch name>
+
+# to merge 2 branches
+git merge <branch name>
+```
+
+### using github using `pull request (PR)`
+it lets you tell others about changes you've pushed to a branch in a repo on GitHub
+
+After doing the pull from github, to see the changes in cli/local device, use `pull` command
+
+```bash
+git pull origin main
+```
+used to fetch and download content from a remote repo and immediately update the local repo to match that content
+
+### merge conflicts
