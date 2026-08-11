@@ -5,7 +5,7 @@ git config --global user.email "someone@email.com"
 git config --list
 ```
 - tells which account we are making changes in github using git
-- configurations are of two types, `gloabal` and `local` (for specific account/repo)
+- configurations are of two types, `global` and `local` (for specific account/repo)
 - last command above shows what all set up using `git config`
 
 ### some git tools
@@ -126,3 +126,33 @@ git pull origin main
 used to fetch and download content from a remote repo and immediately update the local repo to match that content
 
 ### merge conflicts
+- when different chages are made in single file in different branches, so  git doesn't understand which branch's change to keep
+- git is not able to automatically resolve differences in code between two commits
+
+### undoing changes
+##### CASE 1 : staged changes (just added, not commited)
+```bash
+# for some files, by typing their names
+git reset <file name>
+
+# for all files
+git reset
+```
+
+##### CASE 2 : commited changes (for one commit)
+```bash
+# to take back one step, using ~1
+git reset HEAD~1
+```
+
+##### CASE 3 : commited changes (for many commits)
+```bash
+# to get commit hash, use git log
+git reset <commit hash>
+
+# to delete all other changes from other files too after a particular commit (maybe i am not sure)
+git reset --hard <commit hash>
+```
+
+### fork
+it is a new repo that shares code and visibility settings with original "upstream" repo. It is basically a rough copy
