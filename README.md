@@ -156,3 +156,5 @@ git reset --hard <commit hash>
 
 ### fork
 it is a new repo that shares code and visibility settings with original "upstream" repo. It is basically a rough copy
+
+# END OF THE DOCUMENT
